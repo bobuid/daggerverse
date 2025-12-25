@@ -1,0 +1,22 @@
+{
+  "type": "module",
+  "dagger": {
+    "runtime": "bun"
+  },
+  "#": {
+    "dev:dbs-up:vv": "dagger -vvc 'dbs-up | up'",
+    "stop-all-composed": "docker rm -f $(docker ps -q --filter \"label=com.docker.compose.project\")"
+  },
+  "dependencies": {
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@dagger.io/dagger": "latest",
+    "@types/bun": "latest",
+    "typescript": "latest"
+  },
+  "#TODO": [
+    "Security implications of passwordless bob",
+    "ssh-agent on/off"
+  ]
+}
