@@ -7,6 +7,9 @@
     "dev:dbs-up:vv": "dagger -vvc 'dbs-up | up'",
     "stop-all-composed": "docker rm -f $(docker ps -q --filter \"label=com.docker.compose.project\")"
   },
+  "scripts": {
+    "update": "bun install"
+  },
   "dependencies": {
     "zod": "latest"
   },

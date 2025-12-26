@@ -1,0 +1,35 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "//#repo:i": {
+      "cache": false
+    },
+    "//#purge:node-modules-w-find": {
+      "cache": false
+    },
+    "//#web:dev": {
+      "cache": false
+    },
+    "lint": {
+      "dependsOn": [
+        "^build",
+        "^lint"
+      ]
+    },
+    "check-types": {
+      "dependsOn": [
+        "^build",
+        "^check-types"
+      ]
+    },
+    "dev": {
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": false,
+      "persistent": true
+    }
+  },
+  "dangerouslyDisablePackageManagerCheck": false
+}
